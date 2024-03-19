@@ -18,7 +18,7 @@ export default function NavbarComponent() {
     return (
       <Navbar className="bg-blue-200">
         <NavbarBrand>
-          <Image width={40} height={40} src={"/assets/pic.jpg"} alt={""} />
+          <Image width={40} className="mr-4 rounded-full" height={40} src={"/assets/pic.jpg"} alt={""} />
           <p className="font-bold text-inherit">ACME</p>
         </NavbarBrand>
         <NavbarContent className="hidden sm:flex gap-4" justify="center">
@@ -26,7 +26,7 @@ export default function NavbarComponent() {
             <Link
               color="foreground"
               href="/"
-              className={`${pathname === "/" && "font-bold"}`}
+              className={`${pathname === "/" && "font-bold text-blue-800"}`}
             >
               Home
             </Link>
@@ -42,7 +42,13 @@ export default function NavbarComponent() {
             </Link>
           </NavbarItem>
           <NavbarItem>
-            <Link color="foreground" href="/product">
+            <Link
+              className={`${
+                pathname === "/product" && "font-bold text-blue-800"
+              }`}
+              color="foreground"
+              href="/product"
+            >
               Products
             </Link>
           </NavbarItem>

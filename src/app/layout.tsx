@@ -4,7 +4,7 @@ import "./globals.css";
 import NextUILayout from "./NextUIProvider";
 import NavbarComponent from "@/components/layouts/NavbarComponent";
 import { Suspense } from "react";
-import Loading from "./loading";
+import LoadingComponent from "./loading";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -26,7 +26,7 @@ export default function RootLayout({
       <body className={inter.className}>
         <NextUILayout>
           <NavbarComponent />
-          <Suspense fallback={<Loading />}>{children}</Suspense>
+         {children}
         </NextUILayout>
       </body>
     </html>
