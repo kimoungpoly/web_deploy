@@ -1,8 +1,8 @@
 import React from 'react'
-type ParamProps = {
+export type ParamProps = {
     id: string | number
 }
-const page = (params: ParamProps) => {
+const page: React.FC<{params: ParamProps}> = ({params})=> {
   const id = params.id;
   return (
     <div>
