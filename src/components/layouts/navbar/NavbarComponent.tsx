@@ -10,6 +10,8 @@ import {
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
+import { navbarItem } from "./menu";
+
 
 export default function NavbarComponent() {
   const pathname = usePathname();
@@ -22,36 +24,21 @@ export default function NavbarComponent() {
           <p className="font-bold text-inherit">ACME</p>
         </NavbarBrand>
         <NavbarContent className="hidden sm:flex gap-4" justify="center">
-          <NavbarItem>
+          {
+            navbarItem.map((item,index : any)=>(
+              <NavbarItem key={index}>
             <Link
               color="foreground"
-              href="/"
-              className={`${pathname === "/" && "font-bold text-blue-800"}`}
+              href={item.path}
+              className={`${pathname === item.path && "font-bold text-blue-800"}`}
             >
-              Home
+              {
+                item.title
+              }
             </Link>
           </NavbarItem>
-          <NavbarItem>
-            <Link
-              className={`${
-                pathname === "/about-us" && "font-bold text-blue-800"
-              }`}
-              href={"./about-us"}
-            >
-              About
-            </Link>
-          </NavbarItem>
-          <NavbarItem>
-            <Link
-              className={`${
-                pathname === "/product" && "font-bold text-blue-800"
-              }`}
-              color="foreground"
-              href="/product"
-            >
-              Products
-            </Link>
-          </NavbarItem>
+            ))
+          }
         </NavbarContent>
         <NavbarContent justify="end">
           <NavbarItem className="hidden lg:flex">
