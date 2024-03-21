@@ -1,15 +1,10 @@
-"use client";
 import React from "react";
-import { Button } from "@nextui-org/react";
 
 const page = () => {
+  console.log("This is about page")
   return (
     <div>
-      About Page
-      {/* dak oy error  */}
-      <Button color="primary" onClick={gdsdgjd}>
-        Error Button
-      </Button>
+     This is about page
     </div>
   );
 };
