@@ -1,11 +1,20 @@
-import React from 'react'
+"use client"
+import React from "react";
 
 const page = () => {
   return (
     <div>
-      Team page
-    </div>
-  )
-}
+      <p className="heading">Team page</p>
 
-export default page
+      <style jsx>
+        {`
+          .heading {
+            color: blue;
+          }
+        `}
+      </style>
+    </div>
+  );
+};
+
+export default page;

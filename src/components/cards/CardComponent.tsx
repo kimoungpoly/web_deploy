@@ -11,6 +11,7 @@ export default function CardComponent({title, thumbnail}: ProductType) {
         <h4 className="font-bold text-large">{title}</h4>
       </CardHeader>
       <CardBody className="overflow-visible py-2">
+        
         <Image
           alt="Card background"
           className="object-cover rounded-xl"
@@ -21,3 +22,4 @@ export default function CardComponent({title, thumbnail}: ProductType) {
     </Card>
   );
 }
+
