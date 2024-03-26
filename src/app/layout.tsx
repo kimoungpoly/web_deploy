@@ -50,7 +50,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${poppins.className} ${kantumruy_pro.className}`}>
+      <body className={`${poppins.variable} ${kantumruy_pro.variable}`}>
         <NextUILayout>
           <StyledJsxRegistry>
             <NavbarComponent />
