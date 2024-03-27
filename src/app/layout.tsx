@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter, Kantumruy_Pro, Poppins } from "next/font/google";
+import { Battambang, Inter, Kantumruy_Pro, Khmer, Poppins, Roboto } from "next/font/google";
 import "./globals.css";
 import NextUILayout from "./NextUIProvider";
 import NavbarComponent from "@/components/layouts/navbar/NavbarComponent";
@@ -10,35 +10,36 @@ import Error from "./error";
 import StyledJsxRegistry from "./registry";
 
 const inter = Inter({ subsets: ["latin"] });
-const poppins = Poppins({
-  subsets: ["latin"],
-  weight: ["300", "400", "500", "600"],
-  display: "swap",
-  style: ["italic", "normal"],
-  variable: "--font-poppins",
-});
 
-const kantumruy_pro = Kantumruy_Pro({
-  subsets: ["khmer"],
-  display: "swap",
-  variable: "--font-kantumruy-pro",
+const roboto = Roboto({
+  weight: ['400', '700'],
+  style: ['normal', 'italic'],
+  subsets: ['latin'],
+  display: 'swap',
+  variable: "--font-Roboto",
+});
+const battambang = Battambang({
+  weight: ['400', '700'],
+  subsets: ['latin'],
+  display: 'swap',
+  variable: "--font-Battambang",
 });
 
 export const metadata: Metadata = {
   title: {
-    template: "%s - MyShop",
-    default: "MyShop",
+    template: "%s - Store",
+    default: "Store",
   },
-  description: "This is description shop",
-  keywords: ["shop", "ecommerce", "sell"],
+  description: "This is description Store",
+  keywords: ["Store", "ecommerce", "sell"],
   openGraph: {
     title: {
-      template: "%s - MyShop",
-      default: "MyShop",
+      template: "%s - MyStore",
+      default: "MyStore",
     },
-    description: "This is description shop",
+    description: "This is description store",
     images: [
-      "https://i.pinimg.com/736x/f6/99/5d/f6995d649dcf5c1ddf7c28560f8cad5b.jpg",
+      "https://i.pinimg.com/564x/c6/90/4d/c6904de267778a2864debb5e4b41d85e.jpg",
     ],
   },
 };
@@ -50,7 +51,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${poppins.variable} ${kantumruy_pro.variable}`}>
+      <body className={`${roboto.variable} ${battambang.variable}`}>
         <NextUILayout>
           <StyledJsxRegistry>
             <NavbarComponent />

@@ -13,7 +13,7 @@ const config: Config = {
     extend: {
       fontFamily: {
         sans: ['var(--font-inter)'],
-        kantumruy: ['var(--font-kantumruy-pro)'],
+        Battambang: ['var(--font-Battambang)'],
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",

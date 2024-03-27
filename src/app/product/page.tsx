@@ -13,8 +13,9 @@ async function fetchData() {
 
 export const metadata: Metadata = {
   title: "Product",
-  description: "This is Product page shop",
-  keywords: ['shop', 'ecommerce', 'sell']
+  description: "This is Product page store",
+  keywords: ['store', 'ecommerce', 'sell']
+  
 };
 
 export default async function Home() {
