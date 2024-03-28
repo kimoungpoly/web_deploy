@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Battambang, Inter, Kantumruy_Pro, Khmer, Poppins, Roboto } from "next/font/google";
+import { Battambang, Inter, Roboto } from "next/font/google";
 import "./globals.css";
 import NextUILayout from "./NextUIProvider";
 import NavbarComponent from "@/components/layouts/navbar/NavbarComponent";
@@ -18,8 +18,9 @@ const roboto = Roboto({
   display: 'swap',
   variable: "--font-Roboto",
 });
+
 const battambang = Battambang({
-  weight: ['400', '700'],
+  weight: ['400', '400'],
   subsets: ['latin'],
   display: 'swap',
   variable: "--font-Battambang",

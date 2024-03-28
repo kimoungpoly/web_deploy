@@ -18,9 +18,9 @@ export default async function Home() {
   return (
     <>
       <div className="mt-10 flex text-center flex-col justify-center flex-wrap gap-5">
-        <h1 className="font-bold text-large">This is Robotos font</h1>
-        <h1 className="font-bold text-large">នេះជាប្រភេទអក្សរខែ្មរបាត់ដំបង</h1>
-        <h1 className=" font-Battambang ">នេះជាប្រភេទអក្សរខែ្មរបាត់ដំបង</h1>
+        <h1 className="text-large">This is Robotos font</h1>
+        <h1 className="">នេះជាប្រភេទអក្សរខែ្មរបាត់ដំបង</h1>
+        <h1 className="">នេះជាប្រភេទអក្សរខែ្មរបាត់ដំបង</h1>
         <Suspense fallback={<LoadingComponent/>} >
         {/* {users?.map((user: UserType) => (
           <UserCard
